@@ -12,7 +12,7 @@
     "lint": "tslint -p tsconfig.lib.json",
     "prepare": "run-s build",
     "run-tests": "mocha -r ts-node/register lib/**/*.spec.ts",
-    "test": "run-s build check-style lint run-tests"
+    "test": "run-s gen-schema-types check-style lint run-tests"
   },
   "repository": {
     "type": "git",
