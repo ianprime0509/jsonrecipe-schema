@@ -4,9 +4,10 @@
   "description": "A JSON schema for culinary recipes.",
   "main": "dist/lib/index.js",
   "scripts": {
-    "build": "run-s gen-schema-types compile",
+    "build": "run-s gen-schema-types compile copy-schema-types",
     "check-style": "prettier -l recipe.schema.json lib/**/*.ts",
-    "compile": "tsc",
+    "compile": "tsc -p tsconfig.lib.json",
+    "copy-schema-types": "cp lib/schema.d.ts dist/lib/",
     "gen-schema-types": "json2ts -i recipe.schema.json -o lib/schema.d.ts",
     "lint": "tslint -p tsconfig.lib.json",
     "prepare": "run-s build",
