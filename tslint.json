@@ -2,10 +2,14 @@
   "defaultSeverity": "error",
   "extends": ["tslint:recommended"],
   "jsRules": {},
+  "linterOptions": {
+    "exclude": ["**/*.d.ts", "**/*.json"]
+  },
   "rules": {
     "arrow-parens": false,
     "interface-name": false,
     "no-conditional-assignment": false,
+    "no-unused-expression": false,
     "quotemark": [true, "single", "avoid-escape"],
     "variable-name": [
       true,
