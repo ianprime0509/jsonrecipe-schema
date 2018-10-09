@@ -23,6 +23,7 @@
     "webLocation": {
       "description": "A website or other source accessible online.",
       "type": "object",
+      "required": ["url"],
       "properties": {
         "url": {
           "description": "The URL of the source material.",
@@ -34,8 +35,7 @@
           "type": "string",
           "format": "date"
         }
-      },
-      "required": ["url"]
+      }
     },
     "quantity": {
       "oneOf": [
