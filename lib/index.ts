@@ -7,11 +7,13 @@
 export * from './schema';
 
 import Ajv from 'ajv';
+import jsonSchemaDraft04 from 'ajv/lib/refs/json-schema-draft-04.json';
 
 import schema from '../recipe.schema.json';
 import { JSONRecipe } from './schema';
 
-const ajv = new Ajv();
+const ajv = new Ajv({ schemaId: 'id' });
+ajv.addMetaSchema(jsonSchemaDraft04);
 const validator = ajv.compile(schema);
 
 /**
