@@ -1,0 +1,9 @@
+{
+  "title": "Bad ingredient string, version 2",
+  "ingredients": ["1 cup flour, finely ground", "1 each apple,"],
+  "directions": [
+    "Chop the apple.",
+    "Mix the apple in with the flour.",
+    "Eat mixture."
+  ]
+}

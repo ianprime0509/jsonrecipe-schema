@@ -1,0 +1,9 @@
+{
+  "title": "Bad ingredient string spacing",
+  "ingredients": ["1/2  cup flour", "1 each apple"],
+  "directions": [
+    "Chop the apple.",
+    "Mix the apple in with the flour.",
+    "Eat mixture."
+  ]
+}

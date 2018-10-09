@@ -43,7 +43,7 @@
         {
           "description": "The quantity as a fractional string, such as \"1 1/3\".",
           "type": "string",
-          "pattern": "^[1-9][0-9]*((/| [1-9][0-9]*/)[1-9][0-9]*)?$"
+          "pattern": "^[1-9][0-9]* ?((/| [1-9][0-9]* ?/) ?[1-9][0-9]*)?$"
         }
       ]
     },
@@ -52,7 +52,7 @@
         {
           "description": "An ingredient listing as a string, in the format \"<quantity> <unit> <item>[, <preparation>]*\".",
           "type": "string",
-          "$comment": "TODO: figure out if we can make a portable pattern for this."
+          "pattern": "^[1-9][0-9]* ?((/| [1-9][0-9]* ?/) ?[1-9][0-9]*)? [^ ]+ [^,]*[^, ](, [^,]*[^, ])*$"
         },
         {
           "description": "An ingredient listing as an object.",

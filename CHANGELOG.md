@@ -8,6 +8,12 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 
 ## [Unreleased]
 
+### Changed
+
+- Ingredient strings now have a regex pattern directly in the schema
+- Spacing is more strict in ingredient and quantity strings (multiple spaces
+  between components are disallowed)
+
 ## [0.0.1] - 2018-10-07
 
 ### Added
