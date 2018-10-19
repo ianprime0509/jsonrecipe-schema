@@ -1,6 +1,6 @@
 {
   "name": "jsonrecipe-schema",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A JSON schema for culinary recipes.",
   "main": "dist/lib/index.js",
   "scripts": {
