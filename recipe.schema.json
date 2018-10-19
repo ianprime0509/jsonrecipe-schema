@@ -101,9 +101,26 @@
         }
       }
     },
-    "directionStep": {
+    "direction": {
       "description": "A single step in the preparation of the recipe.",
       "type": "string"
+    },
+    "directionGroup": {
+      "description": "A group of directions under a single heading.",
+      "type": "object",
+      "required": ["heading", "directions"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "description": "The heading for this group of directions.",
+          "type": "string"
+        },
+        "directions": {
+          "description": "The directions under this heading.",
+          "type": "array",
+          "items": { "$ref": "#/definitions/direction" }
+        }
+      }
     }
   },
   "required": ["title", "ingredients", "directions"],
@@ -139,24 +156,8 @@
       "type": "array",
       "items": {
         "oneOf": [
-          { "$ref": "#/definitions/directionStep" },
-          {
-            "description": "A group of directions under a single heading.",
-            "type": "object",
-            "required": ["heading", "directions"],
-            "additionalProperties": false,
-            "properties": {
-              "heading": {
-                "description": "The heading for this group of directions.",
-                "type": "string"
-              },
-              "directions": {
-                "description": "The directions under this heading.",
-                "type": "array",
-                "items": { "$ref": "#/definitions/directionStep" }
-              }
-            }
-          }
+          { "$ref": "#/definitions/direction" },
+          { "$ref": "#/definitions/directionGroup" }
         ]
       }
     }

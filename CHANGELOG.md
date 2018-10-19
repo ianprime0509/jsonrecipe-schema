@@ -10,6 +10,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 
 ### Changed
 
+- Renamed `directionStep` to `direction` and refactor `directionGroup`
+  into a definition
 - Ingredient strings now have a regex pattern directly in the schema
 - Spacing is more strict in ingredient and quantity strings (multiple spaces
   between components are disallowed)
